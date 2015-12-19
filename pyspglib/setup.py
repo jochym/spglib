@@ -44,9 +44,9 @@ if None in version_nums:
     print("Failed to get version number in setup.py.")
     raise
 
-setup(name='spglib',
+setup(name='pyspglib',
       version="%d.%d.%d" % tuple(version_nums),
-      description='This is the spglib module.',
+      description='This is the pyspglib module.',
       author='Atsushi Togo',
       author_email='atz.togo@gmail.com',
       url='http://spglib.sourceforge.net/',
