@@ -17,6 +17,8 @@ before_install:
 install: 
     - pip install --upgrade pip
     - pip install -r python/requirements.txt
+    - cd python ; ls -l
+    - cd python ; ln -s ../src .
     - cd python ; python setup.py install
 
 # command to run tests
