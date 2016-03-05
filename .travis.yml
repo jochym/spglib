@@ -17,9 +17,9 @@ before_install:
 install: 
     - pip install --upgrade pip
     - pip install -r python/requirements.txt
+    - cd python ; python setup.py install
 
 # command to run tests
-script:
-    - pwd
+script: true
 
 
