@@ -12,7 +12,7 @@ virtualenv:
 # command to install dependencies
 before_install:
     - sudo apt-get update -qq
-    - sudo apt-get install -qq libopenblas-dev liblapack-dev
+    - sudo apt-get install -qq libopenblas-dev liblapack-dev gfortran
     
 install: 
     - pip install --upgrade pip
