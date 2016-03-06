@@ -23,7 +23,7 @@ before_install:
     - conda update --yes conda
 
 install:
-    - conda install --yes python=$TRAVIS_PYTHON_VERSION pip numpy scipy nose
+    - conda install --yes python=$TRAVIS_PYTHON_VERSION pip numpy nose
     - cd python
     - ln -s ../src .
     - python setup.py install 
