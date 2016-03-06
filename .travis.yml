@@ -33,7 +33,8 @@ install:
     - ./configure
     - make
     - cd python
-    - git describe --tags --dirty | sed -e 's/\([.0-9]*\)-\(.*\)-g.*/\2/' -e 's/^v//g' >__nanoversion__.txt
+    - ./get_nanoversion.sh
+    - cat __nanoversion__.txt
     - ln -s ../src .
     - python setup.py install 
 
