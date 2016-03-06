@@ -40,12 +40,18 @@ with open("../src/version.h") as w:
             if chars in line:
                 version_nums[i] = int(line.split()[2])
 
+with open('__nanoversion__.txt') as nv:
+    nanoversion='%.4s'nv[0].strip()
+    if len(nanoversion)>0 :
+        nanoversion='+'+nanoversion
+        
+
 if None in version_nums:
     print("Failed to get version number in setup.py.")
     raise
 
 setup(name='spglib',
-      version="%d.%d.%d.5" % tuple(version_nums),
+      version=("%d.%d.%d" % tuple(version_nums))+nanoversion,
       description='This is the spglib module.',
       author='Atsushi Togo',
       author_email='atz.togo@gmail.com',

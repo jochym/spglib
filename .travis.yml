@@ -24,7 +24,16 @@ before_install:
 
 install:
     - conda install --yes python=$TRAVIS_PYTHON_VERSION pip numpy
+    - aclocal
+    - autoheader
+    - libtoolize # or glibtoolize on mac
+    - touch INSTALL NEWS README AUTHORS
+    - automake -acf
+    - autoconf
+    - ./configure
+    - make
     - cd python
+    - git describe --tags --dirty | sed -e 's/\([.0-9]*\)-\(.*\)-g.*/\2/' -e 's/^v//g' >>__nanoversion__.txt
     - ln -s ../src .
     - python setup.py install 
 
