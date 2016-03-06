@@ -41,7 +41,10 @@ with open("../src/version.h") as w:
                 version_nums[i] = int(line.split()[2])
 
 with open('__nanoversion__.txt') as nv:
-    nanoversion='%.4s' % (nv[0].strip())
+    nanoversion=''
+    for line in nv:
+        nanoversion='%.4s' % (line.strip())
+        break
     if len(nanoversion)>0 :
         nanoversion='+'+nanoversion
         
