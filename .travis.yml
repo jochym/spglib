@@ -41,8 +41,10 @@ install:
 script:
     - cd test
     - python test_spglib.py
+    - cd ..
 
 deploy:
+  skip_cleanup: true
   provider: pypi
   user: jochym
   password:
