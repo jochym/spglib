@@ -1,2 +1,2 @@
 include src/*.h
-
+include __nanoversion__.txt
