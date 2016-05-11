@@ -47,7 +47,7 @@ script:
 deploy:
     # testing
     provider: pypi
-    server: https://testpypi.python.org/
+    server: https://testpypi.python.org/pypi
     skip_cleanup: true
     user: jochym
     password:
