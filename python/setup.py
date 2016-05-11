@@ -19,8 +19,7 @@ sources = ['../src/cell.c',
            '../src/spin.c',
            '../src/spg_database.c',
            '../src/spglib.c',
-           '../src/symmetry.c',
-           '../src/version.h']
+           '../src/symmetry.c']
 extra_compile_args = []
 extra_link_args = []
 
