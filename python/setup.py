@@ -19,7 +19,8 @@ sources = ['../src/cell.c',
            '../src/spin.c',
            '../src/spg_database.c',
            '../src/spglib.c',
-           '../src/symmetry.c']
+           '../src/symmetry.c',
+           '../src/version.h']
 extra_compile_args = []
 extra_link_args = []
 
@@ -34,7 +35,7 @@ extension = Extension('spglib._spglib',
                       extra_link_args=extra_link_args)
 
 version_nums = [None, None, None]
-with open("../src/version.h") as w:
+with open("src/version.h") as w:
     for line in w:
         for i, chars in enumerate(("MAJOR", "MINOR", "MICRO")):
             if chars in line:
